@@ -1,0 +1,65 @@
+body {
+	margin: 0;
+    padding: 0;
+	background-color: #161616;
+}
+
+.grid-2 {
+	display: grid;
+	grid-template-columns: repeat(1, 1fr);
+}
+
+.Text {
+	color: #D9D9D9;
+	font-family: 'Oswald', sans-serif;
+	padding-top: 1vh;
+	padding-left: 15vh;
+	width: 70%;
+	height: 100%;
+}
+
+.Logo {
+    font-size: 3.5em;
+    color: #6B6B6B;
+}
+
+.Logo>*:hover {
+	transition: 2s ease-in;
+	color: #DCDCDC;
+}
+
+.Contacts {
+	vertical-align: middle;
+	font-size: 2em;
+	padding-top: 1vh;
+}
+
+.Contacts>a {
+  color: #6B6B6B !important;
+  text-decoration: none
+}
+
+.Contacts>a:hover {
+	color: #E0E0E0 !important;
+	transition: 0.5s ease-in;
+}
+
+.Center {
+ text-align: center;
+}
+
+.wow {
+	padding-top: 5vh;
+}
+
+.fmg {
+	color: #D9D9D9;
+	font-family: 'Oswald', sans-serif;
+    font-size: 2em;
+    text-shadow: 1px 1px 9px black;
+}
+
+.autoM>* {
+	margin: 0px;
+	padding-left: 1vh;
+}
