@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+    overflow: auto;
+}
+
 body {
 	margin: 0;
     padding: 0;
@@ -12,9 +17,9 @@ body {
 .Text {
 	color: #D9D9D9;
 	font-family: 'Oswald', sans-serif;
-	padding-top: 1vh;
-	padding-left: 15vh;
-	width: 70%;
+    padding-left: 10%;
+    padding-right: 10%;
+	width: auto;
 	height: 100%;
 }
 
@@ -61,5 +66,5 @@ body {
 
 .autoM>* {
 	margin: 0px;
-	padding-left: 1vh;
+	padding-left: 1px;
 }

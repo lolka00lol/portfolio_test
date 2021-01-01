@@ -11,6 +11,8 @@
 	<title>Портфолио</title>
 </head>
 <body>
+		<div src="img/linewinter.png" alt="гирлянда" style="margin-top: 1.5px; position: relative; z-index: 4; background-image: url(img/linewinter.png); width: auto; height: 3em; pointer-events: none; background-repeat: repeat-x;">
+		</div>
 	<div class="grid-2">
 		<div class="Center wow autoM">
 						<dir class="Logo">
@@ -33,5 +35,19 @@
 				4. И ещё по мелочам :)<br>
 		</dir>	
 	</div>
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+	<script src="snowfall.js"></script>
+	<script type="text/javascript">
+		$(document).snowfall({
+			flakeCount: 40, 
+            minSize: 1, 
+			maxSize:2,
+			minSpeed:1,
+			maxSpeed:3,
+			flakeIndex: 3,
+            round: false,
+            shadow: false,
+		});
+	</script>
 </body>
 </html>

@@ -1,3 +1,8 @@
+html, body {
+    height: 100%;
+    overflow: auto;
+}
+
 body {
 	margin: 0;
     padding: 0;
@@ -5,7 +10,7 @@ body {
 }
 
 .grid-2 {
-	padding-top: 6em;
+	padding-top: 2em;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 }
