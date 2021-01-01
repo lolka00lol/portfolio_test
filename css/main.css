@@ -5,6 +5,7 @@ body {
 }
 
 .grid-2 {
+	padding-top: 6em;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 }
