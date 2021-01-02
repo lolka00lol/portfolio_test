@@ -9,6 +9,11 @@ body {
 	background-color: #161616;
 }
 
+a {
+	text-decoration: none;
+	color: #D9D9D9;
+}
+
 .grid-2 {
 	display: grid;
 	grid-template-columns: repeat(1, 1fr);
@@ -29,7 +34,7 @@ body {
 }
 
 .Logo>*:hover {
-	transition: 2s ease-in;
+	transition: 0.7s ease-in;
 	color: #DCDCDC;
 }
 
@@ -40,8 +45,18 @@ body {
 }
 
 .Contacts>a {
-  color: #6B6B6B !important;
-  text-decoration: none
+  	color: #6B6B6B !important;
+  	text-decoration: none
+}
+
+.Contacts_mute>* {
+	color: #6B6B6B !important;
+	font-size: 1.35em !important;
+}
+  
+.Contacts_mute>*:hover {
+  	color: #E0E0E0 !important;
+  	transition: 0.5s ease-in;
 }
 
 .Contacts>a:hover {
@@ -50,7 +65,7 @@ body {
 }
 
 .Center {
- text-align: center;
+ 	text-align: center;
 }
 
 .wow {
@@ -67,4 +82,12 @@ body {
 .autoM>* {
 	margin: 0px;
 	padding-left: 1px;
+}
+
+#mute {
+	position: relative;
+	width: 1.6em;
+	height: 1.35em;
+	left: 85%;
+	top: 15%;
 }

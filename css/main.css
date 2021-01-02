@@ -9,6 +9,11 @@ body {
 	background-color: #161616;
 }
 
+a {
+	text-decoration: none;
+	color: #D9D9D9;
+}
+
 .grid-2 {
 	padding-top: 2em;
 	display: grid;
@@ -30,7 +35,7 @@ body {
 }
 
 .Logo>*:hover {
-	transition: 2s ease-in;
+	transition: 0.7s ease-in;
 	color: #B5B5B5;
 }
 
@@ -40,9 +45,10 @@ body {
 	padding-top: 2vh;
 }
 
-.Contacts>a {
-  color: #6B6B6B !important;
-  text-decoration: none
+
+.Contacts_mute>*:hover {
+	color: #E0E0E0 !important;
+	transition: 0.5s ease-in;
 }
 
 .Contacts>a:hover {
@@ -50,8 +56,18 @@ body {
 	transition: 0.5s ease-in;
 }
 
+.Contacts>a {
+	color: #6B6B6B !important;
+	text-decoration: none
+}
+
+.Contacts_mute>* {
+	color: #6B6B6B !important;
+	font-size: 1.35em !important;
+}
+
 .Center {
- text-align: center;
+	text-align: center;
 }
 
 .wow {
@@ -72,4 +88,12 @@ body {
 .autoM>* {
 	margin: 0px;
 	padding-left: 35vh;
+}
+
+#mute {
+	position: relative;
+	width: 1.6em;
+	height: 1.35em;
+	left: 85%;
+	top: 15%;
 }
