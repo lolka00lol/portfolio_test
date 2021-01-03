@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css" media="screen and (max-width: 426px)">
+	<link rel="stylesheet" type="text/css" href="css/main.css" media="screen and (min-width: 426px)">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
+
+	<!-- !Для Github pages -->
+	<link rel="stylesheet" type="text/css" href="css/gitcss.css" media="screen and (min-width: 427px)">
+	<title>Портфолио</title>
+</head>
+<body>
+	<video id="hny" autoplay loop name="media" preload="auto" hidden>
+		<source src="Monstercat.ogg" type="audio/ogg"></source>
+	</video>
+		<div src="img/linewinter.png" alt="гирлянда" style="margin-top: 1.5px; position: relative; z-index: 4; background-image: url(img/linewinter.png); width: auto; height: 3em; pointer-events: none; background-repeat: repeat-x;">
+		</div>
+	<div class="grid-2">
+		<div class="Center wow autoM">
+						<dir class="Logo">
+							<i class="fab fa-codepen"></i>
+						</dir>
+							<span class="fmg">Lolochka</span>
+							<dir class="Contacts">
+								<a href="https://github.com/lolka00lol/" target="_blank"><i class="fab fa-github"></i></a>
+								<a href="https://discord.gg/tFkMjtf" target="_blank"><i class="fab fa-discord"></i></a>
+								<a href="https://steamcommunity.com/id/oreogame" target="_blank"><i class="fab fa-steam"></i></a>
+							</dir>
+					</div>
+		<dir class="Text Center autoM wow">
+			Немного о себе<br>
+			Я человек который просто программирует в своё удовольствие!<br>
+			Сделал несколько проектов которые находиться в приватной папке:<br>
+				1. Дискорд бот (ColorBot v2.0)<br>
+				2. Телеграм бот (тоже ColorBot)<br>
+				3. Twitch бот для просмотра трансляций за тебя (чтобы фармить дропсы)<br>
+				4. И ещё по мелочам :)<br>
+			Музыка: <a href="https://youtu.be/DmiGLSG8wYE" target="_blank" style="padding-left: 0vh;">Tokyo Machine - JINGLE BELLS [Monstercat Release]</a></br>
+		</dir>	
+	</div>
+	<div id="mute" style="display: inline;">
+		<a href="#" class="Contacts_mute" style="padding-right: 2.5px; cursor: default;" onclick="PopUpShow()">
+			<i class="fas fa-qrcode"></i>
+		</a>
+		<a id="mute_btn" class="Contacts_mute" onclick="mute()">
+			<i class="fas fa-volume-mute" style="display: none;"></i>
+			<i class="fas fa-volume-up"></i>
+		</a>
+	</div>
+
+	<!-- ?POPUP window qr-code -->
+	<div class="b-popup" onclick="PopUpHide()" hidden>
+		<div id="qrcode" class="b-popup-content"></div>
+	</div>
+
+	<!-- !Скрипты -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.js" integrity="sha256-DrT5NfxfbHvMHux31Lkhxg42LY6of8TaYyK50jnxRnM=" crossorigin="anonymous"></script>
+	<script src="snowfall.js"></script>
+	<script type="text/javascript" src="jquery.qrcode.min.js"></script>
+	<script type="text/javascript">
+// Громкость background music |1.Tokyo Machine - JINGLE BELLS [01.01.2021]|
+	$('#hny').prop('volume', 0.2)
+
+// Функция: mute and unmute
+		function mute(){
+			if($('#hny').prop('volume') == 0.2){
+				$('#hny').prop('volume', 0)
+				$('.fa-volume-mute').show()
+				$('.fa-volume-up').hide()
+			}else{
+				$('#hny').prop('volume', 0.2)
+				$('.fa-volume-mute').hide()
+				$('.fa-volume-up').show()
+			}
+
+		}
+
+// Функция: Snowfall.js
+		$(document).snowfall({
+			flakeCount: 40, 
+            minSize: 1, 
+			maxSize:2,
+			minSpeed:1,
+			maxSpeed:3,
+			flakeIndex: 3,
+            round: false,
+            shadow: false,
+		})
+
+// PopUp Функция: QR-CODE
+		//Функция отображения PopUp
+		function PopUpShow(){
+			$('.b-popup').show();
+			qrcode('https://lolka00lol.github.io/portfolio_test/', 512)
+		}
+		//Функция скрытия PopUp
+		function PopUpHide(){
+			$('.b-popup').hide();
+			$('.b-popup-content>canvas').remove()
+		}
+		//Функция QR-code get
+		function qrcode(url, size){
+			// Generate and Output QR Code
+			$('#qrcode').qrcode({ width: size, height: size, text: url });
+		}
+	</script>
+</body>
+</html>
